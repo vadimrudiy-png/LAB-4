@@ -1,0 +1,9 @@
+{"ts": "2026-11-21T14:00:14Z", "level": "INFO", "event": "enc_ok", "mode": "GCM", "key_id": "cb0b71f1d1fabc2f", "key_bits": 256, "pad": "NONE", "in": "data/sample.txt", "out": "outputs/s.gcm.enc", "sec": 0.00066, "tag_len": 16}
+{"ts": "2026-11-21T14:00:14Z", "level": "INFO", "event": "dec_ok", "mode": "GCM", "key_id": "cb0b71f1d1fabc2f", "in": "outputs/s.gcm.enc", "out": "outputs/s.gcm.dec", "sec": 0.00057, "bytes": 39}
+{"ts": "2026-11-21T14:00:14Z", "level": "INFO", "event": "enc_ok", "mode": "CBC-HMAC", "key_id": "cb0b71f1d1fabc2f", "key_bits": 256, "pad": "ANSIX923", "in": "data/sample.txt", "out": "outputs/s.cbc.enc", "sec": 0.0007, "tag_len": 32}
+{"ts": "2026-11-21T14:00:14Z", "level": "INFO", "event": "dec_ok", "mode": "CBC-HMAC", "key_id": "cb0b71f1d1fabc2f", "in": "outputs/s.cbc.enc", "out": "outputs/s.cbc.dec", "sec": 0.00069, "bytes": 39}
+{"ts": "2026-11-21T14:00:14Z", "level": "INFO", "event": "enc_ok", "mode": "CTR-HMAC", "key_id": "cb0b71f1d1fabc2f", "key_bits": 256, "pad": "NONE", "in": "data/sample.txt", "out": "outputs/s.ctr.enc", "sec": 0.00068, "tag_len": 32}
+{"ts": "2026-11-21T14:00:14Z", "level": "INFO", "event": "dec_ok", "mode": "CTR-HMAC", "key_id": "cb0b71f1d1fabc2f", "in": "outputs/s.ctr.enc", "out": "outputs/s.ctr.dec", "sec": 0.00058, "bytes": 39}
+{"ts": "2026-11-21T14:01:59Z", "level": "ERROR", "event": "dec_fail", "in": "outputs/s.gcm.tampered.enc", "error": "INVALID_AUTH_TAG: AES-GCM integrity/authenticity check failed (tampering or wrong key/AAD)"}
+{"ts": "2026-11-21T14:02:11Z", "level": "ERROR", "event": "dec_fail", "in": "outputs/s.gcm.enc", "error": "INVALID_AUTH_TAG: AES-GCM integrity/authenticity check failed (tampering or wrong key/AAD)"}
+{"ts": "2026-11-21T14:04:07Z", "level": "INFO", "event": "bench_done", "sizes": ["1MB", "5MB", "10MB"], "modes": ["gcm", "cbc", "ctr"], "repeat": 3}
